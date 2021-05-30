@@ -1,0 +1,12 @@
+module.exports = {
+  language: "typescript",
+  types: {
+    repository: {
+      args: ["--map"],
+      make: [
+        ["repository", "src/domain/repositories"],
+        ["repository-impl", "src/implementations/database/mongo/repositories"],
+      ],
+    },
+  },
+};
